@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joslin Shop | Premium Collection</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; scroll-behavior: smooth; }
+        .hero-section { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Pasted image.png'); 
+            background-size: cover; background-position: center; color: white; padding: 100px 0; text-align: center; 
+        }
+        .product-card { 
+            transition: transform 0.3s; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+            border-radius: 10px; overflow: hidden; background: white; margin: 10px;
+        }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.12); }
+        .product-card img { height: 200px; object-fit: cover; }
+        .price-tag { color: #28a745; font-weight: bold; }
+        
+        /* Carousel Customization */
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+            filter: invert(100%); /* Makes arrows dark so they are visible on light bg */
+        }
+        .carousel-inner { padding-bottom: 40px; }
+
+        .btn-faq-custom {
+    background-color: #1a1a1a; /* Matches your navbar */
+    color: #ffffff;
+    padding: 15px 40px;
+    border-radius: 50px; /* Rounded pill shape */
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-faq-custom .faq-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.btn-faq-custom:hover {
+    background-color: #ffffff;
+    color: #0d6efd; /* Bootstrap blue */
+    border-color: #0d6efd;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.3);
+}
+
+.btn-faq-custom:active {
+    transform: translateY(0);
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Shaline Shop</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#productCarousel">Products</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+                 <a class="nav-link" href="faq.html">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Exclusive Catalog</h1>
+            <p class="lead">Slide through our 20+ New Arrivals</p>
+        </div>
+    </header>
+
+    <section id="products" class="container my-5">
+        <h2 class="text-center mb-5 fw-bold">Featured Collections</h2>
+
+        <div id="productCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (2).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>Girls dress</h6><p class="price-tag">KSH 1,999</p><a href="girldress.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (3).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>T-Shirt v/N</h6><p class="price-tag">KSH500</p><a href="T-irshirt.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (4).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>Nike Air Max</h6><p class="price-tag">KSH 5,500</p><a href="nike.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (5).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>Shirt for boys</h6><p class="price-tag">KSH 1000</p><a href="shirtboys.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (6).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>Sunglasses</h6><p class="price-tag">KSH 1,500</p><a href="sunglasses.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (7).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>Trouser Men</h6><p class="price-tag">KSH 1500</p><a href="trousermen.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (9).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>Designer Chair</h6><p class="price-tag">KSH 8,500</p><a href="designchair.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (10).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>Slipers for ladies</h6><p class="price-tag">KSH 500</p><a href="slipers.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (11).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>Sandal for men</h6><p class="price-tag">KSH 1000</p><a href="sandal.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (13).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>hats Style for ladies</h6><p class="price-tag">KSH 700</p><a href="hatladies.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (14).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>Hat for men</h6><p class="price-tag">KSH 500</p><a href="hat.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card product-card h-100">
+                                <img src="Pasted image (15).png" class="card-img-top">
+                                <div class="card-body text-center"><h6>hand bag for girls</h6><p class="price-tag">KSH 1000</p><a href="handbag.html" class="btn btn-sm btn-outline-dark">See More</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="faq" class="bg-light py-5">
+
+
+
+<div class="text-center my-5">
+    <a href="faq.html" class="btn btn-faq-custom">
+        <span class="faq-text">FAQ</span>
+        <i class="fas fa-arrow-right ms-2"></i>
+    </a>
+</div>
+
+
+        <div class="container text-center">
+           <h2 class="mb-4 fw-bold">FAQ</h2>
+            <div class="accordion mx-auto" style="max-width: 700px;" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">How to Order?</button></h2>
+                    <div id="q1" class="accordion-collapse collapse show"><div class="accordion-body">Click "See More" on any product and use the revealed phone number to WhatsApp or Call the owner.</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2026 Joslin Shop. All Rights Reserved.</p>
+    </footer>
+
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

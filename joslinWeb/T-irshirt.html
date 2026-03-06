@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt V/N Details | Joslin Shop</title>
+    
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    
+    <style>
+        :root { --primary-gold: #c5a059; --dark-bg: #1a1a1a; }
+        body { font-family: 'Poppins', sans-serif; background-color: #fcfcfc; }
+        
+        .navbar { background-color: var(--dark-bg); }
+        .product-image { border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto; object-fit: cover; }
+        .contact-box { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 25px; margin-top: 20px; }
+        .badge-stock { background-color: #d4edda; color: #155724; border: none; }
+        .owner-number { 
+            font-size: 1.5rem; font-weight: bold; color: var(--primary-gold); 
+            display: none; 
+            transition: 0.5s;
+        }
+        .reveal-btn { background-color: var(--dark-bg); color: white; border: none; padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        .reveal-btn:hover { background-color: var(--primary-gold); }
+        .breadcrumb-link { text-decoration: none; color: white; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="breadcrumb-link" href="index.html">← BACK TO SHOP</a>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row g-5">
+            <div class="col-md-6">
+                <img src="Pasted image (3).png" class="product-image" alt="T-Shirt V/N">
+                
+                <div class="mt-3 d-flex gap-2">
+                    <div class="p-2 border rounded bg-white small text-muted">
+                        <i class="fas fa-tshirt me-1"></i> Premium Cotton Material
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <span class="badge badge-stock mb-2">Essential Wear</span>
+                <h1 class="display-5 fw-bold text-dark">Classic V-Neck T-Shirt (V/N)</h1>
+                <p class="text-muted mb-4">Category: Men's Fashion | SKU: TS-VN-003</p>
+                <hr>
+                <h3 class="text-success mb-4 fw-bold">KSH 500.00</h3>
+                
+                <h5>Product Description</h5>
+                <p class="text-secondary">
+                    Elevate your everyday basics with our Classic V-Neck T-Shirt. Designed for a modern fit, this V/N tee is made from lightweight, ultra-soft cotton that keeps you cool and comfortable throughout the day.
+                </p>
+                
+                <ul class="text-secondary small">
+                    <li>100% Ring-spun cotton</li>
+                    <li>Reinforced stitching on neck and sleeves</li>
+                    <li>Modern V-neck cut for a sharp look</li>
+                    <li>Fade-resistant fabric after multiple washes</li>
+                    <li>Available in S, M, L, XL, XXL</li>
+                </ul>
+
+                <div class="contact-box shadow-sm border-top border-primary border-3">
+                    <h5 class="fw-bold mb-3 text-dark">Ready to pick this up?</h5>
+                    <p class="small text-muted">Prices are fixed at KSH 500. Click below to reveal the number for order processing.</p>
+                    
+                    <div id="numberContainer" class="mb-3 text-center p-3 border rounded bg-light">
+                        <button id="revealBtn" class="reveal-btn" onclick="showNumber()">Show Owner's Number</button>
+                        <div id="ownerPhone" class="owner-number">
+                            📞 +254 769 823 863
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="https://wa.me/254769823863?text=I'm%20interested%20in%20the%20T-Shirt%20V/N" class="btn btn-outline-success">
+                            Order via WhatsApp
+                        </a>
+                        <button class="btn btn-dark" onclick="window.print()">Print Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2026 Joslin Shop | Premium Daily Essentials</p>
+    </footer>
+
+    <script>
+        function showNumber() {
+            document.getElementById('revealBtn').style.display = 'none';
+            const phoneDiv = document.getElementById('ownerPhone');
+            phoneDiv.style.display = 'block';
+        }
+    </script>
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

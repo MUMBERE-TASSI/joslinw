@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Joslin Shop Help Center</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
+        .navbar { background-color: #1a1a1a; }
+        .faq-header { 
+            background: linear-gradient(45deg, #2c3e50, #000000); 
+            color: white; padding: 80px 0; text-align: center; 
+        }
+        .search-container { max-width: 600px; margin: -30px auto 0; }
+        .faq-card { border: none; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+        .accordion-button:not(.collapsed) { background-color: #e7f1ff; color: #0d6efd; font-weight: 600; }
+        .category-badge { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #6c757d; font-weight: 600; }
+        footer { background: #1a1a1a; color: #adb5bd; padding: 40px 0; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">JOSLIN SHOP</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="faq-header">
+        <div class="container">
+            <h1 class="display-5 fw-bold">How can we help you?</h1>
+            <p class="lead">Find answers to frequently asked questions below.</p>
+        </div>
+    </header>
+
+    <div class="container search-container">
+        <div class="card p-3 shadow-lg border-0 rounded-pill">
+            <div class="input-group">
+                <span class="input-group-text bg-transparent border-0"><i class="fas fa-search text-muted"></i></span>
+                <input type="text" id="faqSearch" class="form-control border-0 shadow-none" placeholder="Search for a question (e.g. 'delivery', 'payment')..." onkeyup="filterFAQ()">
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                
+                <div class="mb-5 faq-section">
+                    <span class="category-badge">Orders & Shipping</span>
+                    <div class="accordion mt-3" id="shippingAccordion">
+                        <div class="accordion-item faq-card mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#s1">
+                                    How long does delivery take?
+                                </button>
+                            </h2>
+                            <div id="s1" class="accordion-collapse collapse show" data-bs-parent="#shippingAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Delivery typically takes 1-3 business days within the city and 3-5 days for upcountry locations via our trusted couriers.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-card mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2">
+                                    Can I track my order?
+                                </button>
+                            </h2>
+                            <div id="s2" class="accordion-collapse collapse" data-bs-parent="#shippingAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Yes! Once your order is dispatched, you will receive a tracking number via SMS or Email.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5 faq-section">
+                    <span class="category-badge">Payment & Safety</span>
+                    <div class="accordion mt-3" id="paymentAccordion">
+                        <div class="accordion-item faq-card mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p1">
+                                    What payment methods do you accept?
+                                </button>
+                            </h2>
+                            <div id="p1" class="accordion-collapse collapse" data-bs-parent="#paymentAccordion">
+                                <div class="accordion-body text-secondary">
+                                    We accept M-Pesa, Credit/Debit cards, and Bank Transfers. Cash on delivery is available for specific regions.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-card mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p2">
+                                    Is my data safe with Joslin Shop?
+                                </button>
+                            </h2>
+                            <div id="p2" class="accordion-collapse collapse" data-bs-parent="#paymentAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Absolutely. We use industry-standard encryption to ensure your personal and payment details are 100% secure.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5 faq-section">
+                    <span class="category-badge">Direct Contact</span>
+                    <div class="accordion mt-3" id="contactAccordion">
+                        <div class="accordion-item faq-card mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
+                                    How do I talk to the owner directly?
+                                </button>
+                            </h2>
+                            <div id="c1" class="accordion-collapse collapse" data-bs-parent="#contactAccordion">
+                                <div class="accordion-body text-secondary">
+                                    You can find the owner's verified number on the <strong>Contact Page</strong> or by clicking "See More" on any product.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="noResults" class="text-center py-5 d-none">
+                    <i class="fas fa-search mb-3 text-muted" style="font-size: 3rem;"></i>
+                    <h4>No matching questions found.</h4>
+                    <p class="text-muted">Try using different keywords or contact our AI assistant.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center py-5 border-top">
+        <h3>Still have questions?</h3>
+        <p class="text-muted">If you cannot find the answer here, our team is ready to help.</p>
+        <a href="contact.html" class="btn btn-primary px-5 py-2 fw-bold">Contact Support</a>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2026 Joslin Shop | Customer Support Center</p>
+        </div>
+    </footer>
+
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // FAQ Filter Logic
+       document.addEventListener('DOMContentLoaded', () => {
+    const faqSearch = document.getElementById('faqSearch');
+    const faqCards = document.querySelectorAll('.faq-card');
+    const faqSections = document.querySelectorAll('.faq-section');
+    const noResults = document.getElementById('noResults');
+
+    /**
+     * The core filtering logic
+     */
+    const filterFAQ = () => {
+        const query = faqSearch.value.toLowerCase().trim();
+        let totalVisible = 0;
+
+        faqSections.forEach(section => {
+            let sectionHasMatch = false;
+            const cardsInSection = section.querySelectorAll('.faq-card');
+
+            cardsInSection.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                const isMatch = text.includes(query);
+
+                if (isMatch) {
+                    card.classList.remove('d-none');
+                    sectionHasMatch = true;
+                    totalVisible++;
+                } else {
+                    card.classList.add('d-none');
+                }
+            });
+
+            // AUTHENTIC TOUCH: Hide the entire category heading if no items match in that section
+            section.style.display = sectionHasMatch ? 'block' : 'none';
+        });
+
+        // Toggle "No Results" display
+        noResults.classList.toggle('d-none', totalVisible > 0);
+    };
+
+    /**
+     * PERFORMANCE TOUCH: Use a simple debounce to ensure the search 
+     * feels smooth and doesn't lag on older mobile phones.
+     */
+    let timeout = null;
+    faqSearch.addEventListener('input', () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(filterFAQ, 150); 
+    });
+});
+    </script>
+</body>
+</html>

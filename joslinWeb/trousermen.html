@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Trouser Details | Joslin Shop</title>
+    
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    
+    <style>
+        :root { --primary-gold: #c5a059; --dark-bg: #1a1a1a; --trouser-gray: #4e5d6c; }
+        body { font-family: 'Poppins', sans-serif; background-color: #fcfcfc; }
+        
+        .navbar { background-color: var(--dark-bg); }
+        .product-image { border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto; object-fit: cover; }
+        .contact-box { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 25px; margin-top: 20px; }
+        .badge-formal { background-color: #f8f9fa; color: #333; border: 1px solid #ddd; font-weight: bold; }
+        .owner-number { 
+            font-size: 1.5rem; font-weight: bold; color: var(--primary-gold); 
+            display: none; 
+            transition: 0.5s;
+        }
+        .reveal-btn { background-color: var(--dark-bg); color: white; border: none; padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        .reveal-btn:hover { background-color: var(--trouser-gray); }
+        .breadcrumb-link { text-decoration: none; color: white; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="breadcrumb-link" href="index.html">← BACK TO SHOP</a>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row g-5">
+            <div class="col-md-6">
+                <img src="Pasted image (7).png" class="product-image" alt="Premium Men's Trouser">
+                
+                <div class="mt-3 d-flex gap-2">
+                    <div class="p-2 border rounded bg-white small text-muted">
+                        <i class="fas fa-cut me-1"></i> Slim Fit & Comfortable
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <span class="badge badge-formal mb-2">Smart Casual</span>
+                <h1 class="display-5 fw-bold text-dark">Classic Men's Trouser</h1>
+                <p class="text-muted mb-4">Category: Men's Fashion | SKU: MN-TR-07</p>
+                <hr>
+                <h3 class="mb-4 fw-bold" style="color: #2c3e50;">KSH 1,500.00</h3>
+                
+                <h5>Product Description</h5>
+                <p class="text-secondary">
+                    Upgrade your wardrobe with these versatile men's trousers. Designed for a sharp, modern silhouette, they offer a perfect balance between formal elegance and casual comfort. Ideal for office wear, dinners, or semi-formal weekend events.
+                </p>
+                
+                <ul class="text-secondary small">
+                    <li>Premium cotton-blend fabric with a hint of stretch</li>
+                    <li>Breathable and wrinkle-resistant for all-day wear</li>
+                    <li>Side-slant pockets and rear button-through pockets</li>
+                    <li>Available Sizes: 30 - 40 (Waist)</li>
+                    <li>Color-fast fabric that keeps its shade wash after wash</li>
+                </ul>
+
+                <div class="contact-box shadow-sm border-top border-secondary border-3">
+                    <h5 class="fw-bold mb-3 text-dark">Ready to wear?</h5>
+                    <p class="small text-muted">Limited sizes remaining. Click below to reveal the number for fast delivery or pickup.</p>
+                    
+                    <div id="numberContainer" class="mb-3 text-center p-3 border rounded bg-light">
+                        <button id="revealBtn" class="reveal-btn" onclick="showNumber()">Show Owner's Number</button>
+                        <div id="ownerPhone" class="owner-number">
+                            📞 +254 769 823 863
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="https://wa.me/254769823863?text=I'm%20interested%20in%20buying%20the%20Men's%20Trouser%20for%20KSH%201500" class="btn btn-outline-success">
+                            WhatsApp for Availability
+                        </a>
+                        <button class="btn btn-dark" onclick="window.print()">Print Specs</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2026 Joslin Shop | Quality Men's Apparel</p>
+    </footer>
+
+    <script>
+        function showNumber() {
+            document.getElementById('revealBtn').style.display = 'none';
+            const phoneDiv = document.getElementById('ownerPhone');
+            phoneDiv.style.display = 'block';
+        }
+    </script>
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

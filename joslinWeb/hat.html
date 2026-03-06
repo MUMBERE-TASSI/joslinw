@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Hat Details | Joslin Shop</title>
+    
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    
+    <style>
+        :root { --primary-gold: #c5a059; --dark-bg: #1a1a1a; --hat-tan: #8d775f; }
+        body { font-family: 'Poppins', sans-serif; background-color: #fcfcfc; }
+        
+        .navbar { background-color: var(--dark-bg); }
+        .product-image { border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto; object-fit: cover; }
+        .contact-box { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 25px; margin-top: 20px; }
+        .badge-style { background-color: #f1f3f5; color: #495057; border: none; font-weight: bold; }
+        .owner-number { 
+            font-size: 1.5rem; font-weight: bold; color: var(--primary-gold); 
+            display: none; 
+            transition: 0.5s;
+        }
+        .reveal-btn { background-color: var(--dark-bg); color: white; border: none; padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        .reveal-btn:hover { background-color: var(--hat-tan); }
+        .breadcrumb-link { text-decoration: none; color: white; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="breadcrumb-link" href="index.html">← BACK TO SHOP</a>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row g-5">
+            <div class="col-md-6">
+                <img src="Pasted image (14).png" class="product-image" alt="Stylish Men's Hat">
+                
+                <div class="mt-3 d-flex gap-2">
+                    <div class="p-2 border rounded bg-white small text-muted">
+                        <i class="fas fa-certificate me-1"></i> Premium Headwear Quality
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <span class="badge badge-style mb-2">Streetwear Accessory</span>
+                <h1 class="display-5 fw-bold text-dark">Classic Men's Hat</h1>
+                <p class="text-muted mb-4">Category: Accessories | SKU: MN-HT-14</p>
+                <hr>
+                <h3 class="mb-4 fw-bold" style="color: var(--hat-tan);">KSH 500.00</h3>
+                
+                <h5>Product Description</h5>
+                <p class="text-secondary">
+                    Complete your look with this essential accessory. Designed for both style and practicality, this hat offers excellent shade while providing a breathable fit for all-day comfort. Perfect for outdoor adventures or adding a sharp touch to your casual outfit.
+                </p>
+                
+                <ul class="text-secondary small">
+                    <li>Durable, high-quality fabric construction</li>
+                    <li>Adjustable strap for a custom "one size fits most" fit</li>
+                    <li>Reinforced stitching for long-lasting wear</li>
+                    <li>Breathable eyelets for ventilation</li>
+                    <li>Available in multiple classic colors</li>
+                </ul>
+
+                <div class="contact-box shadow-sm border-top border-dark border-3">
+                    <h5 class="fw-bold mb-3 text-dark">Ready to get yours?</h5>
+                    <p class="small text-muted">High demand item! Get yours for just KSH 500. Click below to reveal the contact details for pickup.</p>
+                    
+                    <div id="numberContainer" class="mb-3 text-center p-3 border rounded bg-light">
+                        <button id="revealBtn" class="reveal-btn" onclick="showNumber()">Show Owner's Number</button>
+                        <div id="ownerPhone" class="owner-number">
+                            📞 +254 769 823 863
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="https://wa.me/254769823863?text=I'm%20interested%20in%20buying%20the%20Men's%20Hat%20for%20KSH%20500" class="btn btn-outline-success">
+                            WhatsApp for Order
+                        </a>
+                        <button class="btn btn-dark" onclick="window.print()">Save Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2026 Joslin Shop | Headwear & Lifestyle Accessories</p>
+    </footer>
+
+    <script>
+        function showNumber() {
+            document.getElementById('revealBtn').style.display = 'none';
+            const phoneDiv = document.getElementById('ownerPhone');
+            phoneDiv.style.display = 'block';
+        }
+    </script>
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

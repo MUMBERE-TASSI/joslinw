@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Air Max Details | Joslin Shop</title>
+    
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    
+    <style>
+        :root { --primary-gold: #c5a059; --dark-bg: #1a1a1a; --sport-blue: #007bff; }
+        body { font-family: 'Poppins', sans-serif; background-color: #fcfcfc; }
+        
+        .navbar { background-color: var(--dark-bg); }
+        .product-image { border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; height: auto; object-fit: cover; }
+        .contact-box { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 25px; margin-top: 20px; }
+        .badge-sport { background-color: #e3f2fd; color: #0d6efd; border: none; font-weight: bold; }
+        .owner-number { 
+            font-size: 1.5rem; font-weight: bold; color: var(--primary-gold); 
+            display: none; 
+            transition: 0.5s;
+        }
+        .reveal-btn { background-color: var(--dark-bg); color: white; border: none; padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        .reveal-btn:hover { background-color: var(--sport-blue); }
+        .breadcrumb-link { text-decoration: none; color: white; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="breadcrumb-link" href="index.html">← BACK TO SHOP</a>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row g-5">
+            <div class="col-md-6">
+                <img src="Pasted image (4).png" class="product-image" alt="Nike Air Max">
+                
+                <div class="mt-3 d-flex gap-2">
+                    <div class="p-2 border rounded bg-white small text-muted">
+                        <i class="fas fa-check-circle me-1"></i> Original Quality Guaranteed
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <span class="badge badge-sport mb-2">Performance Footwear</span>
+                <h1 class="display-5 fw-bold text-dark">Nike Air Max Premium</h1>
+                <p class="text-muted mb-4">Category: Sportswear | SKU: NK-AM-90X</p>
+                <hr>
+                <h3 class="text-primary mb-4 fw-bold">KSH 5,500.00</h3>
+                
+                <h5>Product Description</h5>
+                <p class="text-secondary">
+                    Experience ultimate comfort and iconic style with the Nike Air Max. Featuring the legendary visible Air cushioning and a durable synthetic upper, these sneakers are designed for both heavy workouts and streetwear fashion.
+                </p>
+                
+                <ul class="text-secondary small">
+                    <li>Visible Air-Sole unit for lightweight cushioning</li>
+                    <li>Breathable mesh panels with leather overlays</li>
+                    <li>Waffle-pattern rubber outsole for superior grip</li>
+                    <li>Available Sizes: 38 - 45 (EU)</li>
+                    <li>Lightweight and responsive feel</li>
+                </ul>
+
+                <div class="contact-box shadow-sm border-top border-primary border-3">
+                    <h5 class="fw-bold mb-3 text-dark">Secure your pair today!</h5>
+                    <p class="small text-muted">Stock is limited. Click below to reveal the contact details for pickup or delivery.</p>
+                    
+                    <div id="numberContainer" class="mb-3 text-center p-3 border rounded bg-light">
+                        <button id="revealBtn" class="reveal-btn" onclick="showNumber()">Show Owner's Number</button>
+                        <div id="ownerPhone" class="owner-number">
+                            📞 +254 769 823 863
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="https://wa.me/254769823863?text=I%20want%20to%20buy%20the%20Nike%20Air%20Max%20for%20KSH%205500" class="btn btn-outline-success">
+                            Chat on WhatsApp
+                        </a>
+                        <button class="btn btn-dark" onclick="window.print()">Download Specs</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2026 Joslin Shop | Authentic Sportswear Dealer</p>
+    </footer>
+
+    <script>
+        function showNumber() {
+            document.getElementById('revealBtn').style.display = 'none';
+            const phoneDiv = document.getElementById('ownerPhone');
+            phoneDiv.style.display = 'block';
+        }
+    </script>
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
